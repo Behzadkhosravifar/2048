@@ -1,6 +1,6 @@
-## Modes
+## Mode
 
-* Norml mode: 
+* Normal mode: 
 [1×1](http://cyberzhg.github.io/2048/index.html?size=1) 
 [2×2](http://cyberzhg.github.io/2048/index.html?size=2) 
 [3×3](http://cyberzhg.github.io/2048/index.html?size=3) 
@@ -42,3 +42,38 @@
 * [使徒](http://cyberzhg.github.io/2048/skin_shito.html)
 * [兵庫北](http://cyberzhg.github.io/2048/skin_bkb.html)
 * [Chemical elements](http://cyberzhg.github.io/2048/skin_chemistry.html)
+
+
+## Solve Puzzle by `javascript`
+
+1. Open [Pazzle web page](https://behzadkhosravifar.github.io/2147483648244) by browser (like chrome)
+2. Press F12 or devTools
+3. Go to Console tab
+4. Paste below codes
+5. Press Enter to show step by step the best solution
+6. Run again to go steps for `steps` times
+
+#### By Display Mode:
+```
+var e = new Event("keydown");
+var steps = 1000; // steps count
+var go = function () {
+    e.keyCode = Math.floor(Math.random() * 4) + 37;    
+    e.which = e.keyCode;
+    document.dispatchEvent(e);
+    if (steps-- > 0)
+        setTimeout(go, 10); // sleep 10 min second for every step
+}
+go();
+```
+
+#### Without Displaying and Faster:
+```
+var e = new Event("keydown");
+var steps = 1000; // steps count
+for(var i=0; i<steps; i++) {
+    e.keyCode = Math.floor(Math.random() * 4) + 37;    
+    e.which = e.keyCode;
+    document.dispatchEvent(e);
+}
+```
