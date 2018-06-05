@@ -46,7 +46,7 @@
 
 ## Solve Puzzle by `javascript`
 
-1. Open [Pazzle web page](http://cyberzhg.github.io/2048) by browser (like chrome)
+1. Open [Pazzle web page](https://behzadkhosravifar.github.io/2147483648244) by browser (like chrome)
 2. Press F12 or devTools
 3. Go to Console tab
 4. Paste below codes
