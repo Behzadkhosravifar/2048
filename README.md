@@ -77,3 +77,7 @@ for(var i=0; i<steps; i++) {
     document.dispatchEvent(e);
 }
 ```
+
+
+## Snapshot
+![snapshot](https://github.com/Behzadkhosravifar/2147483648244/raw/master/image/winSnapshot.png)
